@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/img/favicon.png">
+
+    <title>Cuộc Phiêu Lưu của Scooby-doo</title>
+    <link rel="stylesheet" href="/css/main.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+</head>
+
+
+<body>
+
+    <nav class="navbar navbar-expand-md">
+        <a class="navbar-brand" href="/"><img src="/img/logo.png" /></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation"><i class="fas fa-bars"></i>
+      </button>
+
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/"><i class="fas fa-home"></i> Trang chủ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/vi/movies"><i class="fas fa-film"></i> Phim</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/vi/chatbot/" role="button" aria-haspopup="true" aria-expanded="false" lang="en"><i class="fas fa-crown"></i> Hỗ trợ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/vi/movies/up-coming"><i class="fas fa-clock"></i> Sắp chiếu</a>
+                </li>
+            </ul>
+            <a class="nav-button" href="/vi/movies"><i class="fas fa-ticket-alt"></i> Nhận vé</a>
+        </div>
+    </nav>
+    <!-- breadcrumbs -->
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Trang chủ</a></li>
+            <li class="breadcrumb-item"><a href="/vi/movies">Phim</a></li>
+            <li class="breadcrumb-item active" aria-current="page" id="tenphim">Scooby-doo</li>
+        </ol>
+    </nav>
+    <!-- /breadcrumbs -->
+    <div class="movie-buttons text-center">
+        <button type="button" class="btn btn-labeled btn-recommend">
+            <span class="btn-label"><i class="fas fa-thumbs-up"></i></span> Đề xuất</button>
+        <button type="button" class="btn btn-labeled btn-watchlist">
+            <span class="btn-label"><i class="fas fa-plus"></i></span> Thêm vào danh sách theo dõi</button>
+        <button type="button" class="btn btn-labeled btn-unlike">
+            <span class="btn-label"><i class="fas fa-thumbs-down"></i></span> Tôi không thích</button>
+    </div>
+    <div class="movie_card_scooby" id="bright">
+        <div class="info_section">
+            <div class="movie_header">
+                <img class="movie-poster" src="https://cdn.moveek.com/media/cache/tall/5ef326d03b6ab706846162.jpg" />
+                <h1>Cuộc Phiêu Lưu của Scooby-doo</h1>
+                <span class="minutes"><i class="fas fa-clock"></i> 1h 34m</span>
+                <p class="type">Hài, hoạt hình, phiêu lưu</p>
+            </div>
+            <div class="movie_desc">
+                <p class="text">
+                    Bộ phim hoạt hình trên màn ảnh rộng đầu tiên về chú chó Scooby-Doo đình đám sẽ hé lộ sự ra đời của biệt đội thám tử 5 thành viên nổi tiếng gồm Scooby, Shaggy, Fred, Daphne và Velma; đồng thời dõi theo cuộc phiêu lưu và thử thách lớn nhất từ trước đến
+                    nay mà cả đội phải đối mặt – chạy đua với thời gian, ngăn chặn âm mưu giải phóng con chó ma Cerberus thống trị thế giới
+                </p>
+                <div id="myModal" class="modal">
+                    <div class="modal-content" align="center">
+                        <span class="close"></span>
+                        <div class="film-block">
+
+                            <div class="film-item t-3d">
+                                <div class="film-item-pic">
+                                    <img src="https://cdn.moveek.com/media/cache/tall/5ef326d03b6ab706846162.jpg" alt="TENET (C16)">
+                                </div>
+                                <div class="film-item-txt">
+                                    <h3>Scoob! (C16)</h3>
+                                    <!--SCHECULE-BLOCK-->
+                                    <div class="schedule-block">
+                                        <div class="schedule-block-load" style="opacity: 1;">
+                                            <div class="cinema-item">
+
+                                                <div class="row-new">
+                                                    <div class="row-date" data-date="21/09/2020"><span><%= date%><br>2020</span></div>
+                                                    <div class="row-hour">
+                                                        <ul>
+                                                            <li value='<%= date%>'> 09:10 </li>
+                                                            <li value='<%= date%>'> 14:10 </li>
+                                                            <li value='<%= date%>'> 18:10 </li>
+                                                            <li value='<%= date%>'> 22:10 </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="cinema-item">
+                                                <div class="row-new">
+                                                    <div class="row-date" data-date="22/09/2020"><span><%= mai%><br>2020</span></div>
+                                                    <div class="row-hour">
+                                                        <ul>
+                                                            <li value='<%= mai%>'> 09:10 </li>
+                                                            <li value='<%= mai%>'> 14:10 </li>
+                                                            <li value='<%= mai%>'> 18:10 </li>
+                                                            <li value='<%= mai%>'> 22:10 </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--SCHECULE-BLOCK-->
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <a href="https://www.youtube.com/watch?v=BEzkB7CfXEg" class="trailer"><i class="fas fa-video"></i> Xem Trailer</a>
+
+            <!-- <a href="/vi/booking-form" class="buy-ticket" ten_phim="crawl"><i class="fas fa-ticket-alt"></i> Mua vé</a> -->
+            <a href="javascript:void(0)" class="buyticket"><i class="fas fa-ticket-alt" style=" <%= flag  %> "></i>Mua vé</a>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
+                    <ul class="list-inline mb-2">
+                        <li class="list-inline-item">
+                            <a href="/vi/page">Về chúng tôi</a>
+                        </li>
+                        <li class="list-inline-item">&sdot;</li>
+                        <li class="list-inline-item">
+                            <a href="/vi/page">Hoàn tiền</a>
+                        </li>
+                        <li class="list-inline-item">&sdot;</li>
+                        <li class="list-inline-item">
+                            <a href="/vi/page">Điều khoản và Quyền riêng tư</a>
+                        </li>
+                        <li class="list-inline-item">&sdot;</li>
+                        <li class="list-inline-item">
+                            <a href="#">Liên hệ</a>
+                        </li>
+                    </ul>
+                    <p class="small mb-4 mb-lg-0">18VP &copy; 2020. Đã đăng ký bản quyền.</p>
+                </div>
+                <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
+                    <ul class="list-inline mb-0">
+                        <li class="list-inline-item mr-3 ">
+                            <a href="#" class="footer-fb">
+                                <i class="fab fa-linkedin fa-2x fa-fw"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item mr-3">
+                            <a href="#" class="footer-tw">
+                                <i class="fab fa-twitter fa-2x fa-fw"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#" class="footer-in">
+                                <i class="fab fa-instagram fa-2x fa-fw"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- /Footer -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <script src="/script/movies.js"></script>
+
+</body>
+
+</html>

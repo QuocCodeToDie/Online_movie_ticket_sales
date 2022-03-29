@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Admin's page</title>
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:700, 600,500,400,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="/css/admin.css">
+
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/data.js"></script>
+
+
+
+
+</head>
+
+<body>
+    <div class="header">
+        <div class="logo">
+            <i class="fa fa-tachometer"></i>
+            <span>Trang Admin</span>
+        </div>
+        <a href="#" class="nav-trigger"><span></span></a>
+    </div>
+    <div class="side-nav">
+        <div class="logo">
+            <i class="fa fa-tachometer"></i>
+            <span>Trang Admin</span>
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <a href="/admin/DB">
+                        <span><i class="fa fa-user"></i></span>
+                        <span>Cơ sở dữ liệu</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/admin/movies">
+
+                        <span><i class="fa fa-file-video-o" aria-hidden="true"></i></span>
+                        <span>
+                            Quản lý phim
+                        </span>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="#">
+                        <span><i class="fa fa-bar-chart"></i></span>
+                        <span>Phân tích</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/admin/doanhthu active">
+                        <span><i class="fa fa-credit-card-alt"></i></span>
+                        <span>Doanh thu</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="main-content">
+        <div class="title">
+            Phân tích
+        </div>
+
+        <div class="main">
+            <div class="widget">
+                <div class="title">Doanh thu</div>
+                <div id="doanhthu"></div>
+            </div>
+            <div class="widget">
+                <div class="title">Tổng số vé</div>
+                <div id="sove"></div>
+            </div>
+            <div class="widget">
+                <div class="title">Người mua</div>
+                <div id="nguoimua"></div>
+            </div>
+        </div>
+    </div>
+    <script src="/script/doanhthu.js"></script>
+</body>
+
+</html>

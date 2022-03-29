@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/img/favicon.png">
+    <!-- <script src='https://kit.fontawesome.com/a076d05399.js'></script> -->
+
+    <title>Movies - Get Booked Online</title>
+    <link rel="stylesheet" href="/css/main.css" type="text/css">
+
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Bootstrap sub CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        .modal-confirm {
+            color: #636363;
+            width: 325px;
+            margin: 30px auto;
+        }
+        
+        .modal-confirm .modal-content-1 {
+            padding: 20px;
+            border-radius: 5px;
+            border: none;
+            background: white;
+        }
+        
+        .modal-confirm .modal-header {
+            border-bottom: none;
+            position: relative;
+        }
+        
+        .modal-confirm h4 {
+            text-align: center;
+            font-size: 26px;
+            margin: 30px 0 -15px;
+        }
+        
+        .modal-confirm .form-control,
+        .modal-confirm .btn {
+            min-height: 40px;
+            border-radius: 3px;
+        }
+        
+        .modal-confirm .close {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+        }
+        
+        .modal-confirm .modal-footer {
+            border: none;
+            text-align: center;
+            border-radius: 5px;
+            font-size: 13px;
+        }
+        
+        .modal-confirm .icon-box {
+            color: #fff;
+            position: absolute;
+            margin: 0 auto;
+            left: 0;
+            right: 0;
+            top: -70px;
+            width: 95px;
+            height: 95px;
+            border-radius: 50%;
+            z-index: 9;
+            background: #82ce34;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+        }
+        
+        .modal-confirm .icon-box i {
+            font-size: 58px;
+            position: relative;
+            top: 3px;
+        }
+        
+        .modal-confirm.modal-dialog {
+            margin-top: 80px;
+        }
+        
+        .modal-confirm .btn {
+            color: #fff;
+            border-radius: 4px;
+            background: #82ce34;
+            text-decoration: none;
+            transition: all 0.4s;
+            line-height: normal;
+            border: none;
+        }
+        
+        .modal-confirm .btn:hover,
+        .modal-confirm .btn:focus {
+            background: #6fb32b;
+            outline: none;
+        }
+        
+        .modal-footer .btn {
+            z-index: 100;
+        }
+        
+        .trigger-btn {
+            display: inline-block;
+            margin: 100px auto;
+        }
+        
+        #countdown .spinner-border .text-success {
+            text-align: center;
+        }
+        
+        #countdown {
+            font-size: 26px;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+
+<body>
+
+    <nav class="navbar navbar-expand-md">
+        <a class="navbar-brand" href="/en"><img src="/img/logo.png" /></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation"><i class="fas fa-bars"></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/en"><i class="fas fa-home"></i> Home</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/en/movies"><i class="fas fa-film"></i> Movies</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/en/chatbot/" role="button" aria-haspopup="true" aria-expanded="false" lang="en"><i class="fas fa-crown"></i> Support</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/en/up-coming"><i class="fas fa-clock"></i> Upcoming</a>
+                </li>
+
+
+            </ul>
+        </div>
+
+
+
+
+        <a class="nav-button" href="/en/movies"><i class="fas fa-ticket-alt"></i> Get Tickets</a>
+
+    </nav>
+    <!-- breadcrumbs -->
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/en">Home</a></li>
+            <li class="breadcrumb-item"><a href="/en/movies">Movie</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Book Ticket</li>
+        </ol>
+    </nav>
+    <!-- /breadcrumbs -->
+    <div style="display: none;" id="vedon">
+        <%=single%>
+    </div>
+    <div style="display: none;" id="vedoi">
+        <%=double%>
+    </div>
+    <div style="display: none;" id="get-lang">
+        <%=lang%>
+    </div>
+    <div class="container">
+        <div class="booking-ticket-name">
+            <table align="center">
+                <tr>
+                    <th>Name</th>
+                    <th>Date</th>
+                    <th>Quantity</th>
+                    <th>Showtime</th>
+                </tr>
+                <tr>
+                    <td>
+                        <div id="ticket-movie-name" style="text-transform:capitalize">
+                            <%= temp  %>
+                        </div>
+                    </td>
+                    <td>
+                        <div id="ticket-movie-date">
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="ticket-movie-amount">
+                            <%= amount %>
+                        </div>
+                    </td>
+                    <td>
+                        <div id="ticket-movie-showtime">
+                            <%= xuat_chieu%>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <ul class="showcase">
+            <li>
+                <div class="seat" style="width: 20px;height: 20px;"></div>
+                <small>N/A</small>
+            </li>
+            <li>
+                <div class="seat-double" style="width: 20px;height: 20px;"></div>
+                <small>Double seat</small>
+            </li>
+            <li>
+                <div class="seat selected" style="width: 20px;height: 20px;"></div>
+                <small>Selected</small>
+            </li>
+            <li>
+                <div class="seat occupied" style="width: 20px;height: 20px;"></div>
+                <small>Occupied</small>
+            </li>
+        </ul>
+        <div class="containerbooking">
+            <div class="screen">Screen</div>
+            <div class="containerbooking-seat">
+                <div class="row">
+                    <div class="seat">A1</div>
+                    <div class="seat">A2</div>
+                    <div class="seat">A3</div>
+                    <div class="seat">A4</div>
+                    <div class="seat">A5</div>
+                    <div class="seat">A6</div>
+                    <div class="seat">A7</div>
+                    <div class="seat">A8</div>
+                </div>
+
+                <div class="row">
+                    <div class="seat">B1</div>
+                    <div class="seat">B2</div>
+                    <div class="seat ">B3</div>
+                    <div class="seat ">B4</div>
+                    <div class="seat">B5</div>
+                    <div class="seat">B6</div>
+                    <div class="seat">B7</div>
+                    <div class="seat">B8</div>
+                </div>
+
+                <div class="row">
+                    <div class="seat">C1</div>
+                    <div class="seat">C2</div>
+                    <div class="seat">C3</div>
+                    <div class="seat">C4</div>
+                    <div class="seat">C5</div>
+                    <div class="seat">C6</div>
+                    <div class="seat ">C7</div>
+                    <div class="seat ">C8</div>
+                </div>
+
+                <div class="row">
+                    <div class="seat">D1</div>
+                    <div class="seat">D2</div>
+                    <div class="seat">D3</div>
+                    <div class="seat">D4</div>
+                    <div class="seat">D5</div>
+                    <div class="seat">D6</div>
+                    <div class="seat">D7</div>
+                    <div class="seat">D8</div>
+                </div>
+
+                <div class="row">
+                    <div class="seat">E1</div>
+                    <div class="seat">E2</div>
+                    <div class="seat">E3</div>
+                    <div class="seat ">E4</div>
+                    <div class="seat ">E5</div>
+                    <div class="seat">E6</div>
+                    <div class="seat">E7</div>
+                    <div class="seat">E8</div>
+                </div>
+
+                <div class="row">
+                    <div class="seat-double">F1</div>
+                    <div class="seat-double">F2</div>
+                    <div class="seat-double">F3</div>
+                    <div class="seat-double">F4</div>
+                    <div class="seat-double ">F5</div>
+                    <div class="seat-double ">F6</div>
+                    <div class="seat-double ">F7</div>
+                    <div class="seat-double">F8</div>
+                </div>
+            </div>
+            <div align="center">
+                <button type="submit" class="checkout" id="checkout-button">Payment</button>
+                <button <a href="/en/movies" id="booking-seat-cancel">Back</a></button>
+            </div>
+        </div>
+
+        <div id="myModal1" class="modal">
+
+            <div class="modal-content" align="center" style="font-size: larger; font-family: cursive;">
+
+                <span class="close">&times;</span>
+                <h1>Ticket's Info</h1>
+                <p style="text-transform:capitalize">Full Name:
+                    <%= name %>
+                        <%=lastname%>
+                </p>
+                <p>Email:
+                    <%= email %>
+                </p>
+                <p id="getDate_1">Date:
+
+                </p>
+                <p style="text-transform:capitalize">
+                    Movie Name:
+                    <%= temp%>
+                </p>
+                <p id="xuatchieu" data="<%= xuat_chieu%>">Show Time:
+                    <%= xuat_chieu%>
+                </p>
+                <p>Quantity:
+                    <%= amount %>
+                </p>
+                <div>
+                    Single Seat Number:
+                    <p class="getSeat"> </p>
+                </div>
+                <div>
+                    Double Seat Number:
+                    <p class="getdoubleSeat"> </p>
+                </div>
+                <div>
+                    Total:
+                    <%= tongtien %> VNĐ
+                </div>
+                <a href="#Quoc" class="trigger-btn" data-toggle="modal"><button type="submit" id="submit-final">Check Out</button></a>
+            </div>
+        </div>
+    </div>
+
+
+    <!--  -->
+    <div id="Quoc" class="modal fade">
+        <div class="modal-dialog modal-confirm">
+            <div class="modal-content-1">
+                <div class="modal-header">
+                    <div class="icon-box">
+                        <i class="material-icons">&#xe876;</i>
+                    </div>
+                    <h4 class="modal-title">Awaresome!</h4>
+                </div>
+                <div class="modal-body">
+                    <p class="text-center">Your booking has been confirmed.</p>
+                    <p>Your will be redirected to homepage in </p>
+                </div>
+                <div class="modal-footer">
+
+                    <div id="countdown"></div>
+                    <div class="spinner-border text-success"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
+                    <ul class="list-inline mb-2">
+                        <li class="list-inline-item">
+                            <a href="/en/page">About us</a>
+                        </li>
+                        <li class="list-inline-item">&sdot;</li>
+                        <li class="list-inline-item">
+                            <a href="/en/page">Refunds</a>
+                        </li>
+                        <li class="list-inline-item">&sdot;</li>
+                        <li class="list-inline-item">
+                            <a href="/en/page">Terms and Privacy</a>
+                        </li>
+                        <li class="list-inline-item">&sdot;</li>
+                        <li class="list-inline-item">
+                            <a href="#">Contact</a>
+                        </li>
+                    </ul>
+                    <p class="small mb-4 mb-lg-0">18VP &copy; 2020. All Rights Reserved.</p>
+                </div>
+                <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
+                    <ul class="list-inline mb-0">
+                        <li class="list-inline-item mr-3 ">
+                            <a href="" class="footer-fb">
+                                <i class="fab fa-linkedin fa-2x fa-fw"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item mr-3">
+                            <a href="#" class="footer-tw">
+                                <i class="fab fa-twitter fa-2x fa-fw"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#" class="footer-in">
+                                <i class="fab fa-instagram fa-2x fa-fw"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- /Footer -->
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <!-- <script src="/script/temp_seats.json"></script> -->
+    <script src="/script/booking.js"></script>
+
+</body>
+
+</html>

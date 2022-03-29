@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Admin's page</title>
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:700, 600,500,400,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="/css/admin.css">
+
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/data.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+</head>
+
+<body>
+    <div class="header">
+        <div class="logo">
+            <i class="fa fa-tachometer"></i>
+            <span>Trang Admin</span>
+        </div>
+        <a href="#" class="nav-trigger"><span></span></a>
+    </div>
+    <div class="side-nav">
+        <div class="logo">
+            <i class="fa fa-tachometer"></i>
+            <span>Trang Admin</span>
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <a href="/admin/DB">
+                        <span><i class="fa fa-user"></i></span>
+                        <span>Cơ sở dữ liệu</span>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="/admin/movies">
+
+                        <span><i class="fa fa-file-video-o" aria-hidden="true"></i></span>
+                        <span>
+                            Quản lý phim
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/admin">
+                        <span><i class="fa fa-bar-chart"></i></span>
+                        <span>Phân tích</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/admin/doanhthu">
+                        <span><i class="fa fa-credit-card-alt"></i></span>
+                        <span>Doanh thu</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="main-content">
+        <div class="title">
+            Analytics
+        </div>
+
+        <div class="main">
+            <div class="widget">
+                <div class="title">Phim đang chiếu</div>
+                <p> Tích vào để chọn phim cần xóa</p>
+                <div id="currentmovie">
+
+                </div>
+                <button type="submit" id="xoaphim">Xóa</button>
+
+
+            </div>
+            <div class="widget">
+                <div class="title">Phim sắp chiếu</div>
+                <div id="upcoming"></div>
+
+            </div>
+
+
+
+            <!-- Button trigger modal -->
+
+
+            <!-- Modal -->
+
+
+            <!-- 
+
+
+             -->
+            <div class="widget">
+                <div class="title">Thêm phim mới</div>
+                <div class="chart">
+                    <form method="post" action="/admin/movies/new">
+                        <table>
+                            <tr>
+                                <td><label for="title">Tiêu đề</label></td>
+                                <td><input type="text" name="title" placeholder="Crawl" onsubmit="required()"></td>
+
+                            </tr>
+                            <tr>
+                                <td><label for="moviename">Tên Phim</label></td>
+                                <td><input type="text" name="moviename" placeholder="Crawl" onsubmit="required()"></td>
+
+                            </tr>
+                            <tr>
+                                <td> <label for="movielenght">Độ dài phim</label></td>
+                                <td><input type="text" name="movielenght" placeholder="100 phút" onsubmit="required()"></td>
+                            </tr>
+
+                            <tr>
+                                <td><label for="moviename">Thể loại</label></td>
+                                <td><input type="text" name="movietype" placeholder="Action" onsubmit="required()"></td>
+                            </tr>
+                            <tr>
+                                <td><label for="moviedesc">Miêu tả</label></td>
+                                <td><input type="text" name="moviedesc" placeholder="Phim kể về..." style="height:150px" onsubmit="required()"></td>
+                            </tr>
+                            <tr>
+                                <td> <label for="movietrailer">Link trailer</label></td>
+                                <td><input type="text" name="movietrailer" placeholder="youtube.com" onsubmit="required()"></td>
+                            </tr>
+                            <tr>
+                                <td> <label for="movieposter">Link ảnh poster phim</label></td>
+                                <td><input type="text" name="movieposter" placeholder="" onsubmit="required()"></td>
+                            </tr>
+                            <tr>
+                                <td> <label for="movieitem">Link ảnh bìa phim</label></td>
+                                <td><input type="text" name="movieitem" placeholder="" onsubmit="required()"></td>
+                            </tr>
+                        </table>
+                        <button type="submit">Lưu</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function required() {
+            var empt = document.forms["form1"]["text1"].value;
+            if (empt == "") {
+                alert("Please input a Value");
+                return false;
+            } else {
+                alert('Code has accepted : you can try another');
+                return true;
+            }
+        }
+    </script>
+    <script src="/script/movie_admin.js"></script>
+</body>
+
+</html>

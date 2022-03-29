@@ -1,0 +1,1428 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+body {
+    background: #fff;
+}
+
+.container {
+    font-family: 'Roboto', sans-serif;
+}
+
+.carousel-item img {
+    height: 650px !important;
+}
+
+
+/* begin navbar */
+
+nav {
+    background-image: linear-gradient( 89.8deg, rgba(204, 156, 223, 1) 0.3%, rgba(155, 219, 245, 1) 20.4%, rgba(245, 183, 208, 1) 40.2%, rgba(250, 186, 98, 1) 62.9%, rgba(234, 238, 240, 1) 81.9%, rgba(250, 245, 171, 1) 99.2%);
+    /* background: rgb(64, 26, 130);
+    background: linear-gradient(90deg, rgba(64, 26, 130, 1) 0%, rgba(201, 0, 135, 1) 100%); */
+}
+
+.nav-item .dropdown-menu {
+    background: white;
+}
+
+.navbar-box-sign-in {
+    background-image: none;
+}
+
+.navbar-box-sign-in .dropdown-menu {
+    margin-left: -200px;
+    width: 350px;
+}
+
+.navbar-box-sign-in form {
+    width: 250px;
+    margin: 1em 2.25em;
+}
+
+.navbar-box-sign-in form input[type=text],
+input[type=password] {
+    width: 110%;
+    padding: 12px 20px;
+    margin-bottom: 10px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.navbar-box-sign-in form button[type=submit] {
+    width: 70%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 5px;
+    margin: 0 3.25em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.navbar-box-sign-in form button[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.nav-item a {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 17px;
+    color: #6B5B95;
+    margin-right: 20px
+}
+
+.nav-item a i {
+    margin-right: 5px
+}
+
+.nav-item a:hover {
+    color: #fb32b9;
+}
+
+.navbar-toggler {
+    color: #fff;
+}
+
+.nav-button {
+    border-radius: 2px;
+    background: #edf7f6;
+    padding: 5px 10px 5px;
+    color: #6B5B95;
+    font-family: 'Roboto', sans-serif;
+    transition: all 0.4s;
+}
+
+.nav-button:hover {
+    background: #fb32b9;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.4s;
+}
+
+
+/* end navbar */
+
+
+/* start main */
+
+.container .alert {
+    background: rgb(64, 26, 130);
+    background: linear-gradient(90deg, rgba(64, 26, 130, 1) 0%, rgba(201, 0, 135, 1) 100%);
+}
+
+.alert-primary {
+    color: #d8d8d8 !important;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.features-icons {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+}
+
+.features-icons .features-icons-item {
+    max-width: 20rem;
+    font-family: 'Roboto', sans-serif;
+    color: #111;
+}
+
+.features-icons .features-icons-item .features-icons-icon {
+    height: 7rem;
+}
+
+.features-icons .features-icons-item .features-icons-icon i {
+    font-size: 4.5rem;
+    transition: all 0.2s;
+}
+
+.features-icons .features-icons-item:hover .features-icons-icon i {
+    font-size: 5rem;
+    transition: all 0.2s;
+}
+
+.fancy-underline {
+    border-bottom: 2px solid transparent;
+    border-image: linear-gradient(to right, #ebb431 0%, #c90087 100%);
+    border-image-slice: 1;
+}
+
+.main-icons {
+    color: rgb(64, 26, 130);
+}
+
+.store-download {
+    background: rgb(64, 26, 130);
+    background: linear-gradient(90deg, rgba(64, 26, 130, 1) 0%, rgba(201, 0, 135, 1) 100%);
+}
+
+section.download {
+    position: relative;
+    padding: 150px 0;
+}
+
+section.download h2 {
+    font-family: 'Roboto', sans-serif;
+    color: #d8d8d8;
+    font-weight: 600;
+    font-size: 50px;
+    margin-top: 0;
+}
+
+section.download p {
+    font-family: 'Roboto', sans-serif;
+    margin-top: 10px;
+    color: #d8d8d8;
+}
+
+section.download .badges .badge-link {
+    display: block;
+    margin-bottom: 25px;
+}
+
+section.download .badges .badge-link:last-child {
+    margin-bottom: 0;
+}
+
+section.download .badges .badge-link img {
+    height: 60px;
+}
+
+@media (min-width: 768px) {
+    section.download .badges .badge-link {
+        display: inline-block;
+        margin-bottom: 0;
+    }
+}
+
+@media (min-width: 768px) {
+    section.download h2 {
+        font-size: 70px;
+    }
+}
+
+section.get-started {
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    padding: 250px 0;
+    background-image: url("https://image.tmdb.org/t/p/original/wrqUiMXttHE4UBFMhLHlN601MZh.jpg");
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+section.get-started .get-started-content {
+    position: relative;
+    z-index: 1;
+}
+
+section.get-started .get-started-content h2 {
+    font-size: 50px;
+    max-width: 700px;
+    margin-top: 0;
+    margin-bottom: 25px;
+    color: #d8d8d8;
+    opacity: 0.9;
+}
+
+@media (min-width: 768px) {
+    section.get-started .get-started-content h2 {
+        font-size: 65px;
+    }
+}
+
+section.get-started .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.browsing-button {
+    padding: 15px 20px 15px;
+    border-radius: 25px;
+    background: rgb(64, 26, 130);
+    background: linear-gradient(90deg, rgba(64, 26, 130, 1) 0%, rgba(201, 0, 135, 1) 100%);
+    font-family: 'Roboto', sans-serif;
+    color: #d8d8d8;
+    font-size: 17px;
+}
+
+.browsing-button:hover {
+    text-decoration: none;
+    background: rgb(64, 26, 130);
+    background: linear-gradient(90deg, rgba(201, 0, 135, 1) 0%, rgba(64, 26, 130, 1) 100%);
+    color: #d8d8d8;
+}
+
+.newsletter {
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    background-color: #343a40;
+    background: url("../img/newsletter-bg.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+}
+
+.newsletter .overlay {
+    position: absolute;
+    background-color: #212529;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.3;
+}
+
+nav .breadcrumb {
+    border-radius: 0;
+    background: #1b1b1b;
+}
+
+.breadcrumb-item a {
+    font-family: 'Roboto', sans-serif;
+    color: #cfcfcf;
+}
+
+.breadcrumb-item a:hover {
+    color: #c90087;
+    text-decoration: none;
+}
+
+.list {
+    display: block;
+    background-color: rgba(255, 255, 255, .8);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .12), 0 1px 2px rgba(0, 0, 0, .24);
+    border-radius: 2px;
+    transition: all .2s ease-in-out;
+    margin-top: 40px;
+}
+
+.list-header {
+    display: block;
+    float: left;
+    width: 35%;
+    overflow: hidden;
+    position: relative;
+    border-radius: 2px 0 0 2px;
+}
+
+.list-header img {
+    width: 100%;
+}
+
+.list-header .list-header-image:after {
+    display: block;
+    content: '';
+    background-color: rgba(0, 0, 0, .4);
+    position: absolute;
+    top: 100%;
+    left: 100%;
+    width: 100px;
+    height: 100px;
+    box-shadow: 0 0 200px 100px rgba(0, 0, 0, .58);
+    z-index: 1;
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    opacity: 0;
+    filter: alpha(opacity=0);
+    transition: all .8s;
+    -moz-transition: all .8s;
+    -webkit-transition: all .8s;
+    -o-transition: all .8s;
+}
+
+.list-content {
+    display: block;
+    margin-left: 35%;
+    padding: 15px;
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+}
+
+.list-meta {
+    display: block;
+    margin-bottom: 16px;
+    font-size: 13px;
+    line-height: 100%;
+}
+
+.list-meta .list-meta-item {
+    display: inline-block;
+    margin-right: 18px;
+    color: #9A9A9A;
+}
+
+.list:after {
+    display: block;
+    clear: both;
+    content: '';
+}
+
+.list:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .19), 0 6px 6px rgba(0, 0, 0, .23);
+}
+
+@media only screen and (max-width: 991px) {
+    .list-header {
+        display: block;
+        width: 100%;
+        padding: 0;
+        border-radius: 0;
+    }
+    .list-content {
+        display: block;
+        width: 100%;
+        margin-left: 0;
+        padding: 15px;
+        clear: both;
+    }
+}
+
+.text-black {
+    font-family: 'Roboto', sans-serif;
+    color: purple;
+}
+
+.text-black:hover {
+    color: #c90087;
+    text-decoration: none;
+}
+
+.movie_card {
+    background: rgb(64, 26, 130);
+    background: linear-gradient(90deg, rgba(64, 26, 130, 1) 0%, rgba(201, 0, 135, 1) 100%);
+    background-image: url('https://image.tmdb.org/t/p/original/w4XWDm9xsarp0aVxnoDDeRl7HFY.jpg');
+    position: relative;
+    display: block;
+    width: 1200px;
+    height: 450px;
+    margin: 100px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: all 0.4s;
+}
+
+.movie_card:hover {
+    transform: scale(1.02);
+    transition: all 0.4s;
+}
+
+.info_section {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-blend-mode: multiply;
+    z-index: 2;
+    border-radius: 10px;
+}
+
+.movie_header {
+    position: relative;
+    padding: 25px;
+    height: 40%;
+}
+
+.movie_header h1 {
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+}
+
+.movie_header .minutes {
+    font-family: 'Roboto', sans-serif;
+    display: inline-block;
+    margin-top: 10px;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.13);
+}
+
+.movie_header .type {
+    font-family: 'Roboto', sans-serif;
+    display: inline-block;
+    color: #cee4fd;
+    margin-left: 10px;
+}
+
+.movie_header .movie-poster {
+    position: relative;
+    float: left;
+    margin-right: 20px;
+    height: 120px;
+    box-shadow: 0 0 20px -10px rgba(0, 0, 0, 0.5);
+}
+
+.movie_desc {
+    font-family: 'Roboto', sans-serif;
+    padding: 25px;
+    height: 50%;
+}
+
+.movie_desc .text {
+    margin-top: -30px;
+    color: #cfd6e1;
+}
+
+.trailer {
+    background: transparent;
+    color: #fff !important;
+    border: 1px solid purple;
+    padding: 10px 20px 10px;
+    border-radius: 4px;
+    margin-left: 25px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.trailer:hover {
+    text-decoration: none;
+    background: purple;
+    color: #fff !important;
+}
+
+.buy-ticket {
+    background: purple;
+    color: #fff !important;
+    padding: 10px 20px 10px;
+    border-radius: 4px;
+    margin-left: 25px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.buy-ticket:hover {
+    text-decoration: none;
+    background: #fff;
+    color: purple !important;
+}
+
+.movie-buttons {
+    margin-bottom: -50px;
+}
+
+.movie-buttons button {
+    font-family: 'Roboto', sans-serif;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 10px
+}
+
+.btn-recommend {
+    background: #c90087;
+    color: #fff;
+}
+
+.btn-recommend:hover {
+    background: #e52da9;
+}
+
+.btn-watchlist {
+    background: #3d60d3;
+    color: #fff;
+}
+
+.btn-watchlist:hover {
+    background: #6282eb;
+}
+
+.btn-unlike {
+    background: #f31750;
+    color: #fff;
+}
+
+.btn-unlike:hover {
+    background: #f4416f;
+}
+
+@media screen and (min-width: 768px) {
+    .movie_header {
+        width: 60%;
+    }
+    .movie_desc {
+        width: 50%;
+    }
+    .info_section {
+        background: linear-gradient(to right, #0d0d0c 50%, transparent 100%);
+    }
+    .blur_back {
+        width: 80%;
+        background-position: -100% 10% !important;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .movie_card {
+        width: 95%;
+        margin: 70px auto;
+        min-height: 350px;
+        height: auto;
+    }
+    .trailer,
+    .buy-ticket {
+        margin-left: 0;
+        margin-top: 10px;
+        margin-bottom: 0px;
+    }
+    .blur_back {
+        width: 100%;
+        background-position: 50% 50% !important;
+    }
+    .movie_header {
+        width: 100%;
+        margin-top: 85px;
+    }
+    .movie_desc {
+        width: 100%;
+    }
+    .info_section {
+        background: linear-gradient(to top, rgb(20, 20, 19) 50%, transparent 100%);
+        display: inline-grid;
+    }
+}
+
+.container .page-text {
+    text-align: justify !important;
+    line-height: 30px;
+}
+
+div#letstalk {
+    padding: 15px 60px;
+    background: transparent;
+    max-width: 800px;
+    border: 1px solid #E8ECEC;
+    border-radius: 4px;
+    box-shadow: 0 4px 10px 4px rgba(176, 195, 210, 0.3);
+}
+
+.form-group {
+    margin-bottom: 20px !important;
+}
+
+form select,
+.form_custom select {
+    padding: 0px !important;
+    font-size: 13px;
+}
+
+.form-control {
+    width: 100% !important;
+    height: 75px;
+    color: #555;
+    border: none !important;
+    background-color: transparent;
+    border-bottom: 1px solid #423A6B !important;
+}
+
+.contact-submit {
+    background: rgb(64, 26, 130);
+    background: linear-gradient(90deg, rgba(64, 26, 130, 1) 0%, rgba(201, 0, 135, 1) 100%);
+    border: none;
+    border-radius: 2px;
+    width: 100%;
+    height: 50px;
+    color: #fff;
+    font-size: 20px;
+}
+
+.contact-submit:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.footer-fb:hover {
+    color: #3B5998 !important;
+    border: none !important;
+}
+
+.footer-tw:hover {
+    color: #08a0e9 !important;
+    border: none !important;
+}
+
+.footer-in:hover {
+    color: #DD2A7B !important;
+    border: none !important;
+}
+
+footer.footer {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.footer a {
+    font-family: 'Roboto', sans-serif;
+    color: #fff
+}
+
+.footer p {
+    color: #d6d6d6;
+    font-family: 'Roboto', sans-serif;
+}
+
+.footer a:hover {
+    color: #fff;
+    border-bottom: 2px solid transparent;
+    border-image: linear-gradient(to right, #ebb431 0%, #c90087 100%);
+    border-image-slice: 1;
+    text-decoration: none;
+}
+
+.footer {
+    background: rgb(64, 26, 130);
+    background: linear-gradient(90deg, rgba(64, 26, 130, 1) 0%, rgba(201, 0, 135, 1) 100%);
+    color: transparent;
+}
+
+
+/* Thành thêm vào css  */
+
+.movie_card_3 {
+    background: rgb(64, 26, 130);
+    background: linear-gradient(90deg, rgba(64, 26, 130, 1) 0%, rgba(201, 0, 135, 1) 100%);
+    background-image: url(https://thumbor.forbes.com/thumbor/fit-in/1200x0/filters%3Aformat%28jpg%29/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F5ebac0ad7af24f0006cdbd27%2F0x0.jpg%3FcropX1%3D205%26cropX2%3D5538%26cropY1%3D0%26cropY2%3D3000);
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 450px;
+    margin: 100px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: all 0.4s;
+}
+
+.movie_card_4 {
+    background: rgb(64, 26, 130);
+    background: linear-gradient(90deg, rgba(64, 26, 130, 1) 0%, rgba(201, 0, 135, 1) 100%);
+    background-image: url(https://blog.fshare.vn/wp-content/uploads/2020/04/photo-1-1565983179390677807386-1.jpg);
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 450px;
+    margin: 100px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: all 0.4s;
+}
+
+
+/* Thành finished */
+
+
+/* Huyền - css  */
+
+.movie_card,
+.movie_card_scooby,
+.movie_card_nhim-soc {
+    background: rgb(64, 26, 130);
+    background: linear-gradient(90deg, rgba(64, 26, 130, 1) 0%, rgba(201, 0, 135, 1) 100%);
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 450px;
+    margin: 100px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: all 0.4s;
+}
+
+.movie_card_scooby {
+    background-image: url('https://phunuvietnam.mediacdn.vn/thumb_w/700/179072216278405120/2020/7/1/sc-15935369556971083796339-765-0-2493-2764-crop-1593536967233944345197.jpg');
+}
+
+.movie_card_nhim-soc {
+    background-image: url('https://i.ytimg.com/vi/8ngypOEtGsY/maxresdefault.jpg');
+}
+
+
+/* huyền finished */
+
+
+/* Nhân css */
+
+.movie_card_5 {
+    background: rgb(64, 26, 130);
+    background: linear-gradient(90deg, rgba(64, 26, 130, 1) 0%, rgba(201, 0, 135, 1) 100%);
+    background-image: url('https://image.thanhnien.vn/768/uploaded/caotung/2020_07_09/1-15859064887561069648487_mxjv.jpg');
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 450px;
+    margin: 100px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: all 0.4s;
+}
+
+.movie_card_6 {
+    background: rgb(64, 26, 130);
+    background: linear-gradient(90deg, rgba(64, 26, 130, 1) 0%, rgba(201, 0, 135, 1) 100%);
+    background-image: url('https://znews-photo.zadn.vn/w660/Uploaded/ngogtn/2020_07_27/MV5BNjU0YTIxNDQtNWIxZS00MDU5LWI1MDItMTBiNGYxMDQxNTRkXkEyXkFqcGdeQXVyMzIwNDY4NDI_._V1_SX1777_CR0_0_1777_743_AL_.jpg');
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 450px;
+    margin: 100px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: all 0.4s;
+}
+
+
+/* Nhân finished */
+
+
+/* Long css */
+
+#rom {
+    background-image: url('https://cdn.moveek.com/media/cache/full/5ede44a6c2a26695229840.jpg');
+    background-position: center center;
+    background-size: cover;
+}
+
+#kingmans {
+    background-image: url('https://cdn.moveek.com/media/cache/full/cc38389666e7f8125b8d4616ce3ef74e22fab015.jpg');
+    background-position: center center;
+    background-size: cover;
+}
+
+
+/* Long finished */
+
+
+/* ----------------------------------------- PHẦN BOOKING --------------------------------------------- */
+
+
+/* ---- booking-seat ---- */
+
+.containerbooking {
+    perspective: 1000px;
+    margin-bottom: 30px;
+}
+
+.containerbooking-seat {
+    margin: 0 22%;
+    width: 80%;
+    justify-content: center;
+}
+
+.row {
+    display: flex;
+    width: 100%;
+}
+
+.seat {
+    background-color: gray;
+    height: 25px;
+    width: 7%;
+    padding: 2px;
+    margin: 3px;
+    color: white;
+    text-align: center;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.seat-double {
+    background-color: black;
+    height: 25px;
+    width: 7%;
+    padding: 2px;
+    margin: 3px;
+    color: white;
+    text-align: center;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.seat.selected,
+.seat-double.selected {
+    background-color: green;
+}
+
+.seat.occupied,
+.seat-double.occupied {
+    background-color: red !important;
+}
+
+.seat:nth-of-type(2),
+.seat-double:nth-of-type(2) {
+    margin-right: 18px;
+}
+
+.seat:nth-last-of-type(2),
+.seat-double:nth-last-of-type(2) {
+    margin-left: 18px;
+}
+
+.seat:not(.occupied):hover,
+.seat-double:not(.occupied):hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.showcase .seat:not(.occupied):hover,
+.showcase .seat-double:not(.occupied):hover {
+    cursor: default;
+    transform: scale(1);
+}
+
+.showcase .seat:not(.occupied):hover {
+    cursor: default;
+    transform: scale(1);
+}
+
+.showcase {
+    background: rgba(0, 0, 0, 0.1);
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #777;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.showcase li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+}
+
+.showcase li small {
+    margin-left: 2px;
+}
+
+.screen {
+    background-color: gray;
+    height: 70px;
+    width: 100%;
+    margin: 15px 0;
+    transform: rotateX(-45deg);
+    box-shadow: 0 3px 10px rgba(255, 255, 255, 0.7);
+    text-align: center;
+    font-size: 24px;
+    padding: 0.7em;
+}
+
+.check-out-form {
+    display: none;
+}
+
+#checkout-button,
+#booking-seat-cancel {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: darkorange;
+    border: 2px solid darkorange;
+    border-radius: 20px;
+    padding: 5px 10px;
+    margin: 10px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    margin-top: 2em;
+}
+
+#booking-seat-cancel {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.containerbooking {
+    display: block;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 50% !important;
+    height: auto;
+}
+
+
+/* booking-seat finish */
+
+
+/* ---- booking-ticket ---- */
+
+.booking-ticket-name {
+    background: rgb(64, 26, 130);
+    background: linear-gradient(90deg, rgba(64, 26, 130, 1) 0%, rgba(201, 0, 135, 1) 100%);
+    color: #d8d8d8;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    padding: auto;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    margin-bottom: 0.5em;
+}
+
+.booking-ticket-name table {
+    table-layout: fixed;
+}
+
+.booking-ticket-name table th,
+.booking-ticket-name table td {
+    width: 15em;
+}
+
+#ticket-movie-name,
+#ticket-movie-date,
+#ticket-movie-showtime,
+#ticket-movie-amount,
+#ticket-movie-num-seat {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-size: 28px;
+}
+
+.booking-ticket table {
+    padding: 5em;
+    margin-bottom: 0.5em;
+    width: 100%;
+    font-size: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    table-layout: fixed;
+}
+
+#booking-ticket-table {
+    padding: 5em;
+    margin-bottom: 0.5em;
+    width: 80%;
+}
+
+.booking-ticket table .first th,
+.booking-ticket table .middle td {
+    border: 2px solid #BDBDBD;
+}
+
+.booking-ticket table .first {
+    background-color: darkorange;
+    color: whitesmoke;
+}
+
+.booking-ticket table tr {
+    background-color: #E6E6E6;
+    height: 70px !important;
+    vertical-align: center;
+}
+
+
+/* .booking-ticket table .middle a {
+    background-color: white;
+    width: 30px;
+    height: 30px;
+    border-width: 1px;
+    border-radius: 15px;
+    font-weight: bolder;
+} */
+
+.booking-ticket table .last {
+    background-color: white;
+    color: gray;
+    border: 2px solid #BDBDBD;
+}
+
+.booking-ticket input {
+    text-align: center;
+    font-size: 100%;
+    border: 1px solid gray;
+}
+
+.booking-ticket table .middle #form-result1,
+.booking-ticket table .middle #form-result2,
+#result2 {
+    width: 50% !important;
+}
+
+.booking-ticket-button button {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: darkorange;
+    border: 2px solid darkorange;
+    border-radius: 20px;
+    padding: 5px 15px;
+    margin: 10px;
+}
+
+#booking-ticket-submit,
+#booking-ticket-cancel,
+#checkout-button,
+#booking-seat-cancel {
+    color: white;
+    text-decoration: none;
+}
+
+#booking-ticket-submit:hover,
+#booking-ticket-cancel:hover,
+#checkout-button:hover,
+#booking-seat-cancel:hover {
+    color: gray;
+}
+
+
+/* booking-ticket finish */
+
+
+/* ----------------------------------------- PHẦN BOOKING --------------------------------------------- */
+
+.footer-fb:hover {
+    color: #3B5998 !important;
+    border: none !important;
+}
+
+.footer-tw:hover {
+    color: #08a0e9 !important;
+    border: none !important;
+}
+
+.footer-in:hover {
+    color: #DD2A7B !important;
+    border: none !important;
+}
+
+footer.footer {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.footer a {
+    font-family: 'Roboto', sans-serif;
+    color: #fff
+}
+
+.footer p {
+    color: #d6d6d6;
+    font-family: 'Roboto', sans-serif;
+}
+
+.footer a:hover {
+    color: #fff;
+    border-bottom: 2px solid transparent;
+    border-image: linear-gradient(to right, #ebb431 0%, #c90087 100%);
+    border-image-slice: 1;
+    text-decoration: none;
+}
+
+.footer {
+    background: rgb(64, 26, 130);
+    background: linear-gradient(90deg, rgba(64, 26, 130, 1) 0%, rgba(201, 0, 135, 1) 100%);
+    color: transparent;
+}
+
+
+/* 19/9/2020 */
+
+.movie-hour-table {
+    background: transparent;
+    color: #fff !important;
+    border: 1px solid purple;
+    padding: 10px 20px 10px;
+    border-radius: 4px;
+    margin-left: 25px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.film-block {
+    position: relative;
+    width: 100%;
+    display: block;
+}
+
+.film-block .film-item {
+    width: 100%;
+    height: auto;
+    background-color: #f37520;
+    padding: 30px;
+    box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, 0.3), 0 0 50px 0 rgba(0, 0, 0, 0.4) inset;
+    overflow: hidden;
+}
+
+.film-block .film-item-pic {
+    float: left;
+    width: 300px;
+}
+
+.film-block .film-item-pic img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.5);
+}
+
+.film-block .film-item-txt {
+    display: block;
+    width: auto;
+    margin-left: 320px;
+}
+
+.film-block .film-item-txt h3 {
+    font-family: 'Futurab';
+    font-weight: normal;
+    font-size: 28px;
+    text-transform: uppercase;
+    line-height: 30px;
+    color: #fff;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.film-block .l-social {
+    position: relative;
+    top: auto;
+    right: auto;
+    margin: 0;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.film-block .l-social li {
+    display: inline-block;
+    vertical-align: middle !important;
+    margin: 0 5px !important;
+}
+
+.cinema-item {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+
+.cinema-item .row-hour li {
+    font-family: 'MyriadCondensed';
+    font-weight: normal;
+}
+
+.cinema-item h3 {
+    font-size: 18px;
+    padding: 5px 18px 5px 20px;
+    width: 100%;
+}
+
+.cinema-item h3:after {
+    display: none;
+}
+
+.row-new {
+    width: 100%;
+    height: 110px;
+}
+
+.row-date {
+    float: left;
+    width: 106px;
+    height: 106px;
+    background: #f5c549;
+    color: #000;
+    font-family: 'Futurab';
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 81px;
+    transform: skewX(-10deg);
+    -webkit-transform: skewX(-10deg);
+    text-align: center;
+    margin-left: -20px;
+    padding-left: 20px;
+    position: absolute;
+    left: -10px;
+    top: 0
+}
+
+.row-date span {
+    transform: skewX(10deg);
+    -webkit-transform: skewX(10deg);
+    line-height: 18px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -7px;
+    font-size: 18px;
+}
+
+.row-date {
+    width: auto;
+    margin: 0;
+    padding: 0 20px;
+}
+
+.row-date {
+    padding: 0 10px
+}
+
+.row-hour {
+    float: left;
+    padding-left: 5em;
+    padding-right: 2em;
+    /* width: 5%;
+    padding: 10px;
+    height: 300px; */
+    /* Should be removed. Only for demonstration */
+}
+
+.row-hour ul {
+    height: 100%;
+    line-height: 60px;
+}
+
+.row-hour li {
+    display: inline-block;
+    width: auto;
+    color: #fff;
+    height: 100%;
+    font-family: 'Futurab';
+    font-weight: normal;
+    font-size: 16px;
+    padding: 0 10px;
+    margin: 0 -1px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    margin: 1px -1px
+}
+
+.row-hour li:nth-child(odd) {
+    background: #7c2665;
+}
+
+.row-hour li:nth-child(even) {
+    background: #ba3469;
+}
+
+.row-hour li:nth-child(odd):hover,
+.row-hour li:nth-child(even):hover {
+    background-color: #f5c549;
+    color: #000;
+}
+
+
+/* .row-hour ul {
+    list-style: none;
+    background-color: #cccccc;
+    color: #666666;
+} */
+
+.buyticket {
+    background: purple;
+    color: #fff !important;
+    padding: 10px 20px 10px;
+    border-radius: 4px;
+    margin-left: 25px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.buyticket:hover {
+    text-decoration: none;
+    background: #fff;
+    color: purple !important;
+}
+
+.buyticket {
+    margin-left: 0;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+.disable-time {
+    background: #ddd !important;
+    opacity: 0.3 !important;
+    pointer-events: none !important;
+    color: #666 !important;
+}
+
+.disable-item {
+    display: none;
+    pointer-events: none;
+}
+
+.add .minus {
+    background-color: white;
+    width: 30px;
+    height: 30px;
+    border-width: 1px;
+    border-radius: 15px;
+    font-weight: bolder;
+}
+
+
+/* 
+ */
+
+#myModal1 {
+    display: none;
+    border: double;
+    /* background-image: url("https://i.pinimg.com/originals/0f/8a/d7/0f8ad7c5b020edfe1a7e2d2b308bd9ec.jpg");
+    background-repeat: no-repeat, repeat;
+    background-position: center;
+    background-size: 105%; */
+}
+
+.modal1-content {
+    font-size: 1.5em;
+    font-family: 'Comic Sans', Comic Sans MS, cursive;
+    color: #333333;
+    background-color: white;
+}
+
+.getSeat {
+    font-weight: bold;
+}
+
+.getdoubleSeat {
+    font-weight: bold;
+}
+
+#submit-final {
+    padding-top: 50px;
+    text-align: center;
+    border-radius: 5px;
+    padding: 15px 25px;
+    font-size: 22px;
+    text-decoration: none;
+    margin: 20px;
+    color: #fff;
+    position: relative;
+    display: inline-block;
+    background-color: #2ecc71;
+    box-shadow: 0px 5px 0px 0px #15B358;
+}
+
+#submit-final:active {
+    transform: translate(0px, 5px);
+    -webkit-transform: translate(0px, 5px);
+    box-shadow: 0px 1px 0px 0px;
+}
+
+#submit-final:hover {
+    background-color: #48E68B;
+}

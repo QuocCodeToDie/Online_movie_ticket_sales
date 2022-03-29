@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chuyển hướng</title>
+</head>
+
+<body>
+    Bạn đã tạo thành công phim, bạn sẽ được chuyển về trang admin movies trong
+    <div id="countdown"></div>
+    <script>
+        var getcd = document.getElementById('countdown')
+        var counter = 5;
+        var interval = setInterval(function() {
+            counter--;
+            getcd.innerHTML = counter
+                // Display 'counter' wherever you want to display it.
+            if (counter == 0) {
+                // Display a login box
+                clearInterval(interval);
+            }
+        }, 1000);
+        setTimeout(function() {
+
+            window.location.href = '/admin/movies'
+
+        }, 5000);
+    </script>
+</body>
+
+</html>

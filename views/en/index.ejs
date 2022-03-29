@@ -1,0 +1,450 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/img/favicon.png">
+
+
+    <title lang="en">Tickets - Get Booked Online</title>
+
+
+    <link rel="stylesheet" href="/css/main.css" type="text/css">
+    <link rel="stylesheet" href="/css/select-film.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+</head>
+
+
+<body>
+    <!-- dùng bootstrap navbar  -->
+    <nav class="navbar navbar-expand-md">
+        <a class="navbar-brand" href="/"><img src="img/logo.png" /></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation"><i class="fas fa-bars"></i>
+      </button>
+
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/" lang="en"><i class="fas fa-home"></i> Home</a>
+
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/en/movies" lang="en"><i class="fas fa-film"></i> Movies</a>
+
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/en/chatbot/" role="button" aria-haspopup="true" aria-expanded="false" lang="en"><i class="fas fa-crown"></i> Support</a>
+
+                </li>
+
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/en/movies" lang="en"><i class="fas fa-ticket-alt"></i> Get Tickets </a>
+
+                </li>
+                <li>
+                    <div class="language nav-link">
+
+                        <a id="vietnam" href="/" onclick="changeColor(1)">VN</a> | <a id="english" href="/en" onclick="changeColor(2)" class="active-lang">EN</a>
+                    </div>
+                </li>
+
+
+
+            </ul>
+
+            <!-- đặt hộp đăng nhập  -->
+
+            <nav class="navbar navbar-box-sign-in">
+                <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item dropdown" style=" <%= flag  %> ">
+
+
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" lang="en"><i class="fas fa-crown" ></i> Sign In</a>
+                            <div class="dropdown-menu">
+
+                                <form method="post" id="bhd-form-login-top" action="/login">
+                                    <% if (messages.error) { %>
+                                        <%= messages.error %>
+                                            <% } %>
+                                                <input type="hidden" name="bhd_lang" value="en">
+                                                <input type="hidden" name="action" value="desktop_login">
+                                                <div class="controls"><input name="email" id="email" type="text" placeholder="Email" class="inp--text user_login_email"></div>
+                                                <div class="controls"><input name="password" id="password" type="password" placeholder="Password" class="inp--text user_login_pass"></div>
+                                                <div class="clearfix controls--submit">
+                                                    <button type="submit" id="bhd-login-top" data-style="expand-left" class="btn-submit ladda-button login-submit">Login</button>
+                                                    <a href="https://www.bhdstar.vn/en/quen-mat-khau/" class="forgot--link">Forgot password</a>
+                                                </div>
+                                                <a class="dang-ky" href="/register">Register member</a>
+                                </form>
+                            </div>
+
+                        </li>
+
+
+
+                    </ul>
+                </div>
+
+
+                <!-- </div> -->
+            </nav>
+
+            <nav class="navbar navbar-box-sign-in" style=" <%= flag2  %> ">
+                <form action="/logout?_method=DELETE" method="POST">
+                    <button type="submit">Log out</button>
+                </form>
+            </nav>
+
+            <!-- đặt hộp đăng nhập  -->
+
+        </div>
+    </nav>
+    <!-- dùng bootstrap navbar  -->
+
+
+    <!-- dùng crousel -->
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100" src="https://www.cgv.vn/media/wysiwyg/2020/072020/unhinged-1920wx1000h.jpg" alt="Deadpool 2">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="https://i.ytimg.com/vi/984FlmupHSI/maxresdefault.jpg" alt="Avengers: Infinity War">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="https://image.tmdb.org/t/p/original/gVtxvD7DBQJojua6J0I9t7p48i.jpg" alt="Tomb Raider">
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only" lang="en">Previous</span>
+            <span class="sr-only" lang="vi">Trang trước</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only" lang="en">Next</span>
+            <span class="sr-only" lang="vi">Trang kế</span>
+        </a>
+    </div>
+    <!-- dùng crousel -->
+
+
+
+
+    <div class="select-film" lang="en">
+        <h1 align="center">Đặt vé online</h1>
+
+        <form method="POST" align="center">
+            <select name="phim" id="movies" onchange="checkSelect()">
+            <option value="none" class="non-display">Choose Films</option>
+            <option value="crawl">Crawl</option>
+            <option value="unhinged">Unhinged</option>
+            <option value="scooby-doo">Scooby-doo</option>
+            <option value="latte-and-the-magic-water-stone">Latte and The Magic Water Stone</option>
+            <option value="peninsula"> Peninsula</option>
+            <option value="kingsman">Kingmans</option>
+            <option value="pinocchio">Pinocchio (2019)</option>
+            <option value="rom">Rom</option>
+            
+          </select>
+
+
+
+            <select name="theatres" id="theatres" onchange="checkSelect()">
+            <option value="none" class="non-display">Choose Theater</option>
+            <option value="rap1" class="display-theatre">Theater 1</option>
+            <option value="rap2" class="display-theatre">Theater 2</option>
+            <option value="rap3" class="display-theatre">Theater 3</option>
+            <option value="rap4" class="display-theatre">Theater 4</option>
+            <option value="audi" class="display-notice" disabled>Please choose a movie</option>
+          </select>
+            <br>
+
+            <select name="date" id="date" onchange="checkSelect()">
+            <option value="none" class="non-display">Date</option>
+            <option value="<%=today%>" class="display-date"><%=today%>/2020</option>
+            <option value="<%=mai%>" class="display-date"><%=mai%>/2020</option>
+            <option value="audi" class="display-notice" disabled>Please choose a movie and theatre</option>
+          </select>
+
+            <select name="screenings" id="screenings" onchange="checkSelect()">
+            <option value="none" class="non-display">Showtime</option>
+            <option value="9:10" class="display-sceening">9:10</option>
+            <option value="14:10" class="display-sceening">14:10</option>
+            <option value="18:10" class="display-sceening">18:10</option>
+            <option value="22:10" class="display-sceening">22:10</option>
+            
+          </select>
+
+            <br>
+            <button type="submit" value="Ok">Ok
+        </form>
+    </div>
+
+
+
+
+    <!-- Icons Grid -->
+    <section class="features-icons bg-light text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+                        <div class="features-icons-icon d-flex">
+                            <i class="fas fa-money-bill-alt m-auto main-icons"></i>
+                        </div>
+                        
+                        <h3 lang="en">Best prices </h3>
+                        
+                        <p class="lead mb-0" lang="en">You won't find <span class="fancy-underline" lang="en">cheaper</span> tickets anywhere else!</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+                        <div class="features-icons-icon d-flex">
+                            <i class="fas fa-mobile-alt m-auto main-icons"></i>
+                        </div>
+                        <h3 lang="en">Phone Booking</h3>
+                        
+                        <p class="lead mb-0" lang="en">Book tickets from <span class="fancy-underline">anywhere</span> in the world with out mobile apps!</p>
+                        
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="features-icons-item mx-auto mb-0 mb-lg-3">
+                        <div class="features-icons-icon d-flex">
+                            <i class="fas fa-headphones m-auto main-icons"></i>
+                        </div>
+                        
+                        <h3 lang="en">Professional Support</h3>
+                        
+                        <p class="lead mb-0" lang="en">Have questions? Our professional support <span class="fancy-underline">team</span> is always here!
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="download store-download text-center" id="download">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 mx-auto">
+                    
+                    <h2 class="section-heading" lang="en">Buy tickets from anywhere in the world!</h2>
+                    
+                    <p lang="en">Just download our mobile apps and start browsing for movies!</p>
+                    <div class="badges">
+                        <a class="badge-link" href="#"><img src="img/google-play.png" alt=""></a>
+                        <a class="badge-link" href="#"><img src="img/appstore.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 order-lg-2">
+                    <div class="p-5">
+                        <img class="img-fluid rounded-circle" src="https://mcucosmic.com/wp-content/uploads/2020/03/black-widow-final-top-1200-1024x576.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6 order-lg-1">
+                    <div class="p-5">
+                        
+                        <h2 class="display-4" lang="en">Book tickets...</h2>
+                        <p> ... </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="p-5">
+                        <img class="img-fluid rounded-circle" src="https://miro.medium.com/max/3600/1*RsFsHr8fSA0K70F0M-nN4w.jpeg" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="p-5">
+                        
+                        <h2 class="display-4" lang="en">Pick the most interesting one...</h2>
+                        <p> ... </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Steps -->
+    <div style="display: none;"></div>
+    <section>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 order-lg-2">
+                    <div class="p-5">
+                        <img class="img-fluid rounded-circle" src="https://d2kektcjb0ajja.cloudfront.net/images/posts/feature_images/000/000/072/large-1466557422-feature.jpg?1466557422" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6 order-lg-1">
+                    <div class="p-5">
+                        
+                        <h2 class="display-4" lang="en">Get yourself a ticket!</h2>
+                        <p> ... </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /Steps -->
+    <!-- Action button -->
+    <section class="get-started">
+        <div class="get-started-content">
+            <div class="container">
+                
+                <h2 lang="en">You done reading? Start browsing!<br></h2>
+                <a href="#contact" class="browsing-button" lang="en">Let's Get Started!</a>
+                
+            </div>
+        </div>
+        <div class="overlay"></div>
+    </section>
+    <!-- /Action button -->
+    <!-- Sponsors -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <a href="#">
+                        <img class="img-fluid d-block mx-auto" src="img/universal.png" alt="Sponsor 1">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <a href="#">
+                        <img class="img-fluid d-block mx-auto" src="img/warner.png" alt="Sponsor 2">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <a href="#">
+                        <img class="img-fluid d-block mx-auto" src="img/disney.png" alt="Sponsor 3">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <a href="#">
+                        <img class="img-fluid d-block mx-auto" src="img/byalk.png" alt="Sponsor Myself">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /Sponsors -->
+    <!-- Newsletter -->
+    <section class="newsletter text-white text-center">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-9 mx-auto">
+                    
+                    <h2 class="mb-4" lang="en">Love discounts? We do too!</h2>
+                </div>
+                <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+                    <form>
+                        <div class="form-row">
+                            <div class="col-12 col-md-9 mb-2 mb-md-0">
+                                <input type="email" class="form-control form-control-lg" placeholder="Enter your email..."  style="padding-bottom: 16px; padding-top: 16px; height: 63px;">
+                            </div>
+                            <div class="col-12 col-md-3">
+                                <button type="submit" class="btn btn-block btn-lg btn-primary" lang="en" style="padding-bottom: 16px; padding-top: 16px;">Discounts!</button>
+
+    </div>
+    </div>
+    </form>
+    </div>
+    </div>
+    </div>
+    </section>
+    <!-- /Newsletter -->
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
+                    <ul class="list-inline mb-2">
+                        <li class="list-inline-item">
+                            <a href="#" lang="en">About us</a>
+
+                        </li>
+                        <li class="list-inline-item">&sdot;</li>
+                        <li class="list-inline-item">
+                            <a href="#" lang="en">Refunds</a>
+
+                        </li>
+                        <li class="list-inline-item">&sdot;</li>
+                        <li class="list-inline-item">
+                            <a href="#" lang="en">Terms and Privacy</a>
+
+                        </li>
+                        <li class="list-inline-item">&sdot;</li>
+                        <li class="list-inline-item">
+                            <a href="#" lang="en">Contact</a>
+
+                        </li>
+                    </ul>
+                    <p class="small mb-4 mb-lg-0" lang="en">18VP &copy; 2020. All Rights Reserved.</p>
+
+                </div>
+                <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
+                    <ul class="list-inline mb-0">
+                        <li class="list-inline-item mr-3 ">
+                            <a href="#" class="footer-fb">
+                                <i class="fab fa-linkedin fa-2x fa-fw"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item mr-3">
+                            <a href="#" class="footer-tw">
+                                <i class="fab fa-twitter fa-2x fa-fw"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#" class="footer-in">
+                                <i class="fab fa-instagram fa-2x fa-fw"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- /Footer -->
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="/script/select-film.js"></script>
+    <script>
+        function changeColor(type) {
+            if (type == 1) {
+                document.getElementById("vietnam").style.color = "#228B22";
+                document.getElementById("english").style.color = "aliceblue"
+            } else {
+                document.getElementById("english").style.color = "#228B22"
+                document.getElementById("vietnam").style.color = "aliceblue"
+            }
+
+        }
+    </script>
+
+</body>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/img/favicon.png">
+
+    <title>Chat-Bot</title>
+    <link rel="stylesheet" href="/css/main.css" type="text/css">
+    <link rel="stylesheet" href="/css/chatbot.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+</head>
+
+
+<body>
+
+    <nav class="navbar navbar-expand-md">
+        <a class="navbar-brand" href="/"><img src="/img/logo.png" /></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation"><i class="fas fa-bars"></i>
+          </button>
+
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/"><i class="fas fa-home"></i> Trang chủ</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/vi/movies"><i class="fas fa-film"></i> Phim</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/vi/chatbot/" role="button" aria-haspopup="true" aria-expanded="false" lang="en"><i class="fas fa-crown"></i> Hỗ trợ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/vi/up-coming"><i class="fas fa-clock"></i> Phim sắp chiếu</a>
+                </li>
+            </ul>
+            <a class="nav-button" href="/vi/movies"><i class="fas fa-ticket-alt"></i> Lấy vé ngay!</a>
+        </div>
+    </nav>
+    <!-- breadcrumbs -->
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Trang chủ</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Phim</li>
+        </ol>
+    </nav>
+    <!-- /breadcrumbs -->
+    <!-- movie cards -->
+    <div class="container-chat-box">
+
+
+        <div class="name">
+            <button type="button" id="back" onclick="backSide()"><i class="far fa-arrow-alt-circle-left"></i></button>
+            <p id="main-title" class="title"> Cinema Box </p>
+            <p id="register-title" class="title">Đăng ký thành viên</p>
+            <p id="info-title" class="title">Thông tin</p>
+            <p id="cinemaBot-title" class="title">Cinema Bot</p>
+        </div>
+
+
+
+
+        <div class="content">
+            <a href="/register" id="register"><i class='fas fa-user'></i>  Đăng ký thành viên</a></li>
+            <a href="/vi/page" id="info"><i class='fas fa-info-circle'></i>  Thông tin rạp phim</a></li>
+            <!-- 19.9.2020 -->
+            <a href="#" id="support" onclick="show_chatBot()"><i class='fas fa-headset'></i>  Hỗ trợ</a></li>
+
+
+            <div id="register-box">
+                <div class="register-content">
+                    <form action="">
+                        <label for="">Họ và tên: <input type="text"> </label>
+                        <br><br>
+                        <label for="">Email: <input type="text"></label>
+                        <br><br>
+                        <label for="">Mật khẩu: <input type="password"></label>
+                        <br><br>
+                        <label for="">Nhập lại mật khẩu: <input type="password"></label>
+                        <br><br>
+                        <label for="">Sổ điện thoại: <input type="text"></label>
+                        <br><br>
+                        <label for="">Địa chỉ: <input type="text"></label>
+                    </form>
+                </div>
+                <br>
+                <div class="register-button">
+                    <button id='register-button-submit' type="submit">Đăng ký</button>
+                    <button id='register-button-cancel' type="cancel" onclick="backSide()">Hủy</button>
+                </div>
+            </div>
+
+
+            <div id="info-box">
+                <div class="info-style-content">
+                    <img src="https://vinatel.com.vn/media/file/files/Hinh-blog/man-hinh-quang-cao-rap-chieu-phim.jpg"> Rạp Đông Ba<br> Địa chỉ: 512 Trần Văn Quang, Quận Tân Bình, Tp.HCM
+                </div>
+                <div class="info-style-content">
+                    <img src="https://vnreview.vn/image/18/46/26/1846262.jpg"> Rạp Đông Ba NVC<br> Địa chỉ: 125 Nguyễn Văn Cừ, Quận 5, Tp.HCM
+                </div>
+                <div class="info-style-content">
+                    <img src="https://cdnimg.vietnamplus.vn/uploaded/pcfo/2018_12_25/2512_imax.jpg"> Rạp Đông Ba Củ Chi<br> Địa chỉ: 185 Lê Thị Riêng, Huyện Củ Chi, Tp.HCM
+                    <br></div>
+                <hr>
+                <p>
+                    Mọi thắc mắc xin liên hệ Hotline: 19006969<br>
+                    <img src="https://dangkywebsitevoibocongthuong.com/wp-content/uploads/2018/07/logo-da-thong-bao-website-voi-bo-cong-thuong.png">
+                    <br>&copy 2020 NHOM F. ALL RIGHTS RESERVED
+                </p>
+            </div>
+
+            <div id="chatBot-box">
+                <div class="chatLog-content">
+                    <p id="chatLog">Đông ba cinema xin chào quý khách! Xin vui lòng nhập yêu cầu để được hỗ trợ. <br></p>
+                    <p id="chatLog-rep"></p>
+                </div>
+
+                <div class="userBox-content">
+                    <p>
+
+                        <input id="userBox" placeholder="Bắt đầu ..." type="text" onkeydown="if (event.keyCode == 13) {talk()}">
+                        <button type="submit" onclick="talk()"><i class='fas fa-paper-plane'></i></button>
+
+
+                        <!-- <i class='fas fa-paper-plane'></i> -->
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- /Newsletter -->
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
+                    <ul class="list-inline mb-2">
+                        <li class="list-inline-item">
+                            <a href="#">Về chúng tôi</a>
+                        </li>
+                        <li class="list-inline-item">&sdot;</li>
+                        <li class="list-inline-item">
+                            <a href="#">Hoàn tiền</a>
+                        </li>
+                        <li class="list-inline-item">&sdot;</li>
+                        <li class="list-inline-item">
+                            <a href="#">Điều khoản và bảo mật</a>
+                        </li>
+                        <li class="list-inline-item">&sdot;</li>
+                        <li class="list-inline-item">
+                            <a href="#">Liên hệ</a>
+                        </li>
+                    </ul>
+                    <p class="small mb-4 mb-lg-0">18VP &copy; 2020. Đã đăng ký bản quyền.</p>
+                </div>
+                <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
+                    <ul class="list-inline mb-0">
+                        <li class="list-inline-item mr-3 ">
+                            <a href="#" class="footer-fb">
+                                <i class="fab fa-linkedin fa-2x fa-fw"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item mr-3">
+                            <a href="#" class="footer-tw">
+                                <i class="fab fa-twitter fa-2x fa-fw"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#" class="footer-in">
+                                <i class="fab fa-instagram fa-2x fa-fw"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- /Footer -->
+
+    <!-- Bootstrap core JavaScript
+        ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <script src="/script/chatbot.js"></script>
+
+</body>
+
+</html>

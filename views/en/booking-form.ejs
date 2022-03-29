@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/img/favicon.png">
+
+    <title>Movies - Get Booked Online</title>
+    <link rel="stylesheet" href="/css/main.css" type="text/css">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- <style>
+        .booking-ticket table .middle a {
+            background-color: white !important;
+            width: 30px !important;
+            height: 30px !important;
+            border-width: 1px !important;
+            border-radius: 15px !important;
+            font-weight: bolder !important;
+        }
+    </style> -->
+</head>
+
+
+<body>
+
+    <nav class="navbar navbar-expand-md">
+        <a class="navbar-brand" href="/"><img src="/img/logo.png" /></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation"><i class="fas fa-bars"></i>
+      </button>
+
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/en"><i class="fas fa-home"></i> Home</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/en/movies"><i class="fas fa-film"></i> Movies</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/en/chatbot/" role="button" aria-haspopup="true" aria-expanded="false" lang="en"><i class="fas fa-crown"></i> Support</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/en/up-coming"><i class="fas fa-clock"></i> Upcoming</a>
+                </li>
+            </ul>
+            <a class="nav-button" href="/en/movies"><i class="fas fa-ticket-alt"></i> Get Tickets</a>
+        </div>
+    </nav>
+    <!-- breadcrumbs -->
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/en">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Movies</li>
+            <li class="breadcrumb-item active" aria-current="page">Booking-ticket</li>
+        </ol>
+    </nav>
+    <!-- /breadcrumbs -->
+    <!-- movie cards -->
+    <div class="container">
+        <div class="booking-ticket-name">
+            <table>
+                <tr>
+                    <th>Movie's Name</th>
+                    <th>Date</th>
+                    <th>Show time</th>
+                </tr>
+                <tr>
+                    <tr>
+                        <td>
+                            <div id="ticket-movie-name" style="text-transform:capitalize">
+                                <%= temp  %>
+                            </div>
+                        </td>
+                        <td>
+                            <div id="ticket-movie-date">
+
+                            </div>
+                        </td>
+                        <td>
+                            <div id="ticket-movie-showtime" name="showtime">
+
+                            </div>
+                        </td>
+                    </tr>
+                </tr>
+            </table>
+        </div>
+
+        <div class="booking-ticket" style="display: block;">
+            <form action="/en/movies/booking-form/<%=temp %>" method="post">
+
+                <table align="center">
+                    <tr align="center" class="first">
+                        <th>Ticket type</th>
+                        <th>Ticket Number</th>
+                        <th>Price (VNĐ)</th>
+                        <th>Total (VNĐ)</th>
+                    </tr>
+                    <tr align="center" class="middle">
+                        <td>Adult (Single)</td>
+                        <td>
+
+                            <!-- <a href="javascript:void(0);" onclick="minus1();" class="minus">-</a> -->
+                            <button type="button" onclick="minus1();">-</button>
+                            <input type="number" min="0" max="50" value="0" name="slgheDon" readonly id="form-1">
+                            <!-- <a href="javascript:void(0);" onclick="plus1();" class="add">+</a> -->
+                            <button type="button" onclick="plus1();">+</button>
+                            <!-- <button onclick="plus1();" href="javascript:void(0);">+</button> -->
+                        </td>
+                        <td>49000 <sup>đ</sup></td>
+                        <td><input type="text" name="TotalgheDon" id="form-result1" readonly> <sup>đ</sup></td>
+                    </tr>
+                    <tr align="center" class="middle">
+                        <td>Adults (Double)</td>
+                        <td>
+
+                            <button type="button" onclick="minus2();">-</button>
+                            <!-- <a href="javascript:void(0);" onclick="minus2();" class="minus">-</a> -->
+                            <input type="number" min="0" max="50" value="0" name="slgheDoi" id="form-2" readonly>
+                            <!-- <a href="javascript:void(0);" onclick="plus2();" class="add">+</a> -->
+                            <button type="button" onclick="plus2();">+</button>
+
+                        </td>
+                        <td>108000 <sup>đ</sup></td>
+                        <td><input type="text" name="TotalgheDoi" id="form-result2" readonly> <sup>đ</sup></td>
+                    </tr>
+                    <tr align="center" class="last">
+                        <th colspan="2">Quantity: <input type="number" min="0" max="100" name="soLuong" id="result" value="0" readonly> Ticket</th>
+                        <th colspan="2">Total: <input type="text" name="tongTien" id="result2" value="0" readonly> <sup>đ</sup></th>
+                    </tr>
+                </table>
+                <div class="booking-ticket-button" align="center">
+                    <button type="submit" id="booking-ticket-submit">Book</button>
+                    <button><a href="/en/movies" id="booking-ticket-cancel">Back</a></button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- /movie cards -->
+    <br>
+    <!-- Newsletter -->
+    <section class="newsletter text-white text-center">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-9 mx-auto">
+                    <h2 class="mb-4">Want discounts, enter your email here!!</h2>
+                </div>
+                <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+                    <form>
+                        <div class="form-row">
+                            <div class="col-12 col-md-9 mb-2 mb-md-0">
+                                <input type="email" class="form-control form-control-lg" placeholder="Enter your email..." style="padding-bottom: 16px; padding-top: 16px; height: 63px;">
+                            </div>
+                            <div class="col-12 col-md-3">
+                                <button type="submit" class="btn btn-block btn-lg btn-primary" style="padding-bottom: 16px; padding-top: 16px;">Discounts!</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- /Newsletter -->
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
+                    <ul class="list-inline mb-2">
+                        <li class="list-inline-item">
+                            <a href="/en/page">About us</a>
+                        </li>
+                        <li class="list-inline-item">&sdot;</li>
+                        <li class="list-inline-item">
+                            <a href="/en/page">Refunds</a>
+                        </li>
+                        <li class="list-inline-item">&sdot;</li>
+                        <li class="list-inline-item">
+                            <a href="/en/page">Terms and Privacy</a>
+                        </li>
+                        <li class="list-inline-item">&sdot;</li>
+                        <li class="list-inline-item">
+                            <a href="/en/page">Contact</a>
+                        </li>
+                    </ul>
+                    <p class="small mb-4 mb-lg-0">18VP &copy; 2020. All Rights Reserved.</p>
+                </div>
+                <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
+                    <ul class="list-inline mb-0">
+                        <li class="list-inline-item mr-3 ">
+                            <a href="" class="footer-fb">
+                                <i class="fab fa-linkedin fa-2x fa-fw"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item mr-3">
+                            <a href="#" class="footer-tw">
+                                <i class="fab fa-twitter fa-2x fa-fw"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#" class="footer-in">
+                                <i class="fab fa-instagram fa-2x fa-fw"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- /Footer -->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <script src="/script/ticket.js"></script>
+
+</body>
+
+</html>
